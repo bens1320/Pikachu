@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>测试</title>
     <style>
+        * {box-sizing: border-box}
+        *::before, *::after {box-sizing: border-box}
+
         #demo{
             display: none;
         }
@@ -25,6 +28,22 @@
             display:none;
         }
 
+        #buttons{
+            position: fixed;
+            right: 0;
+            top: 50vh;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #buttons>button{
+            margin-bottom: 10px;
+            padding: 4px 8px
+        }
+
         #html{
             position: fixed;
             top: 0;
@@ -37,6 +56,13 @@
 <body>
 <style id="demo"></style>
 <div id="demo2"></div>
+<div id="buttons">
+    <button id="btnPause">暂停</button>
+    <button id="btnPlay">播放</button>
+    <button id="btnSlow">慢速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnFast">快速</button>
+</div>
 <div id="html">
     <div class="skin">
         <div class="eye left"></div>
